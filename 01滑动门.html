@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+            font-weight: 400;
+            color: #fff;
+            list-style-type: none;
+            text-decoration: none;
+            box-sizing: border-box;
+            /* 在计算内容尺寸时，将内边框包含在内 */
+            font-family: "微软雅黑";
+            line-height: 60px
+        }
+        body{
+            background-color: rgb(228, 103, 103);
+        }
+        .一级盒子{
+           width: 520px;
+           height: 60px;
+           margin: 54px 0 0 130px;
+        }
+        .一级列表{
+            width: 520px;
+            height: 60px;
+        }
+        .一级列表>li{
+            float: left;
+            width: 120px;
+            height: 60px;
+        }
+        li{
+            display: flex;
+            justify-content: center;
+        }
+        .机构设置{
+            position: relative;
+
+        }
+        .二级盒子{
+            position: absolute;
+            top: 60px;
+            background-color: rgb(255 255 255 / 0.5);
+            padding: 10px 0;
+            display: none;
+        }
+        .学校概况，.机构设置{
+            margin-right: 70px;
+        }
+        .二级盒子{
+            color: black;
+            font-size: 16px;
+            line-height: 40px;
+        }
+        .二级列表>li{
+            width: 120px;
+            height: 40px;
+        }
+        .一级列表>li:hover>.二级盒子{
+            display: block;
+        }
+        .一级列表>li:hover{
+            background-color: #bb1313;
+        }
+    </style>
+</head>
+<body>
+    <div class="一级盒子">
+        <ul class="一级列表">
+            <li class="学校概况">
+                <a href=" ">学校概况</a >
+            </li>
+             <li class="机构设置">
+                <a href="#">机构设置</a >
+                <div class="二级盒子">
+                    <ul class="二级列表">
+                        <li>
+                            <a href="#">教学科研机构</a >
+                        </li>
+                        <li>
+                            <a href="#">职能部门</a >
+                        </li>
+                    </ul>
+                </div>
+            </li>
+             <li>
+                <a href="#">教学教育</a >
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
